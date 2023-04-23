@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+    db:
+        image: mysql:5.7
+        restart: always
+        environment:
+            MYSQL_DATABASE: 'agentservice'
+            MYSQL_USER: 'agentservice'
+            MYSQL_PASSWORD: 'agentservice'
+            MYSQL_ROOT_PASSWORD: 'agentservice'
+        ports:
+            - '3306:3306'
+        expose:
+            - '3306'
